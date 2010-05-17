@@ -18,15 +18,15 @@
 #define prd(x, y) (grid[y][x] * grid[y-1][x+1] * grid[y-2][x+2] * grid[y-3][x+3])
 
 /* macro for checking all directions of a square x,y */
-#define check_square(x, y) \
-    do { \
-        if (x < 17) \
-            setprod(px(x, y)); \
-        if (y < 17) \
-            setprod(py(x, y)); \
-        if (x < 17 && y < 17) \
-            setprod(pd(x, y)); \
-        if (x >= 3 && y >= 3) \
+#define check_square(x, y)      \
+    do {                        \
+        if (x < 17)             \
+            setprod(px(x, y));  \
+        if (y < 17)             \
+            setprod(py(x, y));  \
+        if (x < 17 && y < 17)   \
+            setprod(pd(x, y));  \
+        if (x >= 3 && y >= 3)   \
             setprod(prd(x, y)); \
     } while(0)
 

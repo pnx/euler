@@ -10,14 +10,15 @@
  */
  
 #include <stdio.h>
+#include <stdint.h>
 
 int main() {
 
     /* working variables */
     int i, nlen, table[1000000] = {0, 1};
-    long long n;
+    int64_t n;
     /* result */
-    int len, rs = 0;
+    int len = 0, rs = 0;
     
     for(i=2; i < 1000000; i++) {
     

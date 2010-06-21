@@ -5,6 +5,9 @@
  * Projecteuler - Problem 15
  * ------------------------
  * 2010-06-12 Henrik Hautakoski
+ *
+ * Hard one, there is no clear connection between the grid's lines and pascal's triangle.
+ * but it sure is elegant.
  */
 
 #include <stdio.h>

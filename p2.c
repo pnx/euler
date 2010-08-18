@@ -19,7 +19,7 @@ int main() {
 		a = b;
 		b = c;
 			
-		if (c & 1)
+		if (!(c & 1))
 			r += c;
 	}
 		

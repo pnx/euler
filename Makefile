@@ -15,6 +15,7 @@ p% : p%.c
 	$(STRIP) $(BUILDDIR)/$@
 
 p7 : p7.c $(LIBDIR)/prime.o
+p8 : p8.c $(LIBDIR)/io.o
 p10 : p10.c $(LIBDIR)/prime.o
 p12 : p12.c $(LIBDIR)/prime.o
 

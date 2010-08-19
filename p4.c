@@ -50,7 +50,7 @@ int main() {
 		if (!ispalindrom(r) || !(a = factor(r)))
 			continue;
 		
-		printf("%i * %i = %i\n", r/a, a, r);
+		printf("%i\n", r);
 		break;
 	}
 	

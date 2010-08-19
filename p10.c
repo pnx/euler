@@ -19,7 +19,7 @@ int main() {
         if (is_prime(i))
             s += i;
     }
-    printf("%lli\n", s); /* this format throws som warnings but works so whatever */
+    printf("%li\n", s);
 
     return 0;
 }

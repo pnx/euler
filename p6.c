@@ -19,4 +19,6 @@ int main() {
     }
     
     printf("%i\n", s2*s2 - s1);
+
+    return 0;
 }

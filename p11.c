@@ -20,6 +20,7 @@
 /* macro for checking all directions of a square x,y */
 #define check_square(x, y)      \
     do {                        \
+        int p;                  \
         if (x < 17)             \
             setprod(px(x, y));  \
         if (y < 17)             \
@@ -28,6 +29,13 @@
             setprod(pd(x, y));  \
         if (x >= 3 && y >= 3)   \
             setprod(prd(x, y)); \
+    } while(0)
+
+#define setprod(x)      \
+    do {                \
+        p = x;          \
+        if (p > result) \
+            result = p; \
     } while(0)
 
 int grid[20][20] = {
@@ -54,12 +62,6 @@ int grid[20][20] = {
 };
 
 unsigned int result = 0;
-
-void inline setprod(int p) {
-
-    if (p > result)
-        result = p;
-}
 
 int main() {
 

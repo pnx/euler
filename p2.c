@@ -11,16 +11,18 @@
 
 int main() {
 	
-	int c = 0, a = 1, b = 1, r = 0;
+	int a = 1, b = 1, r = 0;
 		
-	while(c < 4000000) {
+	for(;;) {
 		
-		c = a + b;
+		int c = a + b;
 		a = b;
 		b = c;
-			
-		if (!(c & 1))
+
+		if (~c & 1)
 			r += c;
+        if (c >= 4000000)
+            break;
 	}
 		
 	printf("%i\n", r);

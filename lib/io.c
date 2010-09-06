@@ -13,11 +13,10 @@ int readnum(FILE *fd, char *buf, size_t len) {
         if (c < '0' || c > '9')
             continue;
             
-        buf[i] = c;
+        buf[i++] = c;
         
-        if (i+1 > len)
+        if (i > len)
             break;
-        i++;
     }
 
     return i;

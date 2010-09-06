@@ -43,11 +43,11 @@ int ispalindrom(int num) {
 
 int main() {
 	
-	int r, a;
+	int r;
 	
 	for(r=999999; r >= 100001; r--) {
 		
-		if (!ispalindrom(r) || !(a = factor(r)))
+		if (!ispalindrom(r) || !factor(r))
 			continue;
 		
 		printf("%i\n", r);

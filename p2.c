@@ -10,22 +10,22 @@
 #include <stdio.h>
 
 int main() {
-	
-	int a = 1, b = 1, r = 0;
-		
-	for(;;) {
-		
-		int c = a + b;
-		a = b;
-		b = c;
 
-		if (~c & 1)
-			r += c;
+    int a = 1, b = 1, r = 0;
+
+    for(;;) {
+
+        int c = a + b;
+        a = b;
+        b = c;
+
+        if (~c & 1)
+            r += c;
         if (c >= 4000000)
             break;
-	}
-		
-	printf("%i\n", r);
+    }
 
-	return 0;
+    printf("%i\n", r);
+
+    return 0;
 }

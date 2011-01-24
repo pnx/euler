@@ -30,7 +30,7 @@ int main() {
 	
 	bint i, r = 0, n = 600851475143;
 	
-	for(i=2; i <= n ; i++) {
+	for(i=2; i <= n; i++) {
 		
 		if((r = gcd(n, i)) == 1)
 			continue;

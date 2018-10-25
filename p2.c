@@ -1,7 +1,7 @@
 
 /*
  * http://projecteuler.net
- * 
+ *
  * Projecteuler - Problem 2
  * -----------------------
  * 2008-03-11 Henrik Hautakoski
@@ -11,21 +11,21 @@
 
 int main() {
 
-    int a = 1, b = 1, r = 0;
+	int a = 1, b = 1, r = 0;
 
-    for(;;) {
+	for(;;) {
 
-        int c = a + b;
-        a = b;
-        b = c;
+		int c = a + b;
+		a = b;
+		b = c;
 
-        if (~c & 1)
-            r += c;
-        if (c >= 4000000)
-            break;
-    }
+		if (~c & 1)
+			r += c;
+		if (c >= 4000000)
+			break;
+	}
 
-    printf("%i\n", r);
+	printf("%i\n", r);
 
-    return 0;
+	return 0;
 }

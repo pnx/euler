@@ -1,7 +1,7 @@
 
 /*
  * http://projecteuler.net
- * 
+ *
  * Projecteuler - Problem 25
  * -----------------------
  * 2010-07-13 Henrik Hautakoski
@@ -18,7 +18,7 @@
 #define fibolen(n) ((unsigned int) ceil(((n) - MAGIC) / LOG10PHI))
 
 int main() {
-    
-    printf("%i\n", fibolen(1000));
-    return 0;
+
+	printf("%i\n", fibolen(1000));
+	return 0;
 }

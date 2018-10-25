@@ -12,29 +12,29 @@
 
 int ndiv(int n) {
 
-    int i, exp, ndiv = 1;
+	int i, exp, ndiv = 1;
 
-    for(i=2; i <= n; i++) {
+	for(i=2; i <= n; i++) {
 
-        if (!is_prime(i))
-            continue;
+		if (!is_prime(i))
+			continue;
 
 		for(exp = 0; n % i == 0; n /= i, exp++);
 
-        if (exp > 0)
-            ndiv *= exp+1;
+		if (exp > 0)
+			ndiv *= exp+1;
 	}
 
-    return ndiv;
+	return ndiv;
 }
 
 int main() {
 
 	int i, num = 1;
 
-    for(i=2; ndiv(num) <= 500; num += i++);
+	for(i=2; ndiv(num) <= 500; num += i++);
 
-    printf("%i\n", num);
+	printf("%i\n", num);
 
 	return 0;
 }

@@ -9,9 +9,9 @@ STRIP	 = strip
 RMDIR	 = rm -fr
 RM 		 = rm -f
 
-p% : p%.c 
+p% : p%.c
 	mkdir -p $(BUILDDIR)
-	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $(BUILDDIR)/$@
+	$(CC) $(CFLAGS) $^ -o $(BUILDDIR)/$@ $(LDFLAGS)
 	$(STRIP) $(BUILDDIR)/$@
 
 p7 : p7.c $(LIBDIR)/prime.o

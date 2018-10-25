@@ -1,26 +1,28 @@
 
-CC 		 = gcc
-CFLAGS 	 = -Wall -pedantic -ansi
-LDFLAGS  = -lm -lgmp
-BUILDDIR = build
-LIBDIR 	 = lib
+CC	= gcc
+CFLAGS	= -Wall -pedantic -ansi
+LDFLAGS	= -lm -lgmp
+BUILDDIR= build
+LIBDIR	= lib
 
-STRIP	 = strip
-RMDIR	 = rm -fr
-RM 		 = rm -f
+STRIP	= strip
+RMDIR	= rm -fr
+RM	= rm -f
 
-p% : p%.c
+SOURCES := $(shell find . -maxdepth 1 -name 'p*.c')
+PROGS	:= $(addprefix $(BUILDDIR)/, $(SOURCES:./%.c=%))
+
+all:: $(PROGS)
+
+$(BUILDDIR)/p% : p%.c
 	mkdir -p $(BUILDDIR)
-	$(CC) $(CFLAGS) $^ -o $(BUILDDIR)/$@ $(LDFLAGS)
-	$(STRIP) $(BUILDDIR)/$@
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
+	$(STRIP) $@
 
-p7 : p7.c $(LIBDIR)/prime.o
-p8 : p8.c $(LIBDIR)/io.o
-p10 : p10.c $(LIBDIR)/prime.o
-p12 : p12.c $(LIBDIR)/prime.o
-
-$(LIBDIR)/%.o : $(LIBDIR)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+$(BUILDDIR)/p7 : p7.c $(LIBDIR)/prime.o
+$(BUILDDIR)/p8 : p8.c $(LIBDIR)/io.o
+$(BUILDDIR)/p10 : p10.c $(LIBDIR)/prime.o
+$(BUILDDIR)/p12 : p12.c $(LIBDIR)/prime.o
 
 clean :
 	$(RMDIR) $(BUILDDIR)
